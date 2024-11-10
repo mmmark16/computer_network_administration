@@ -1,0 +1,12 @@
+---
+# vars file for caddy_deploy
+
+domain_name: 89.169.146.2.nip.io
+
+log:  # Можно поиграться со значениями
+  file: /var/log/caddy_access.log
+  level: "DEBUG"
+
+html:
+  h1: Lab2
+  text: Ура оно работает

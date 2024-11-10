@@ -1,0 +1,15 @@
+---
+- name: Task1
+  connection: local  # аналог -c local, но для плейбуков
+  hosts: my_servers
+  tasks:
+  - name: Creating an empty file
+    file:
+      path: "$HOME/test.txt"
+      state: touch
+  - name: File content
+    shell: "echo test_file_content > $HOME/test.txt"
+  - name: Removing a file
+    file:
+      path: "$HOME/test.txt"
+      state: absent
